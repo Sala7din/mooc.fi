@@ -18,8 +18,37 @@ public class PaymentCard {
     
     public String toString(){
         
-       System.out.println("The card has a balance of " + this.balance + " euros");
+        String toString = "The card has a balance of " + this.balance + " euros";
+       
+        return toString;
+        
+   
              
+    }
+    
+    public void eatAffordably() {
+        if (this.balance - 2.60 >= 0){
+        this.balance = this.balance - 2.60;
+        }
+        
+    }
+    
+    public void eatHeartily() {
+        if (this.balance - 4.60 >= 0){
+        this.balance = this.balance - 4.60;
+        }
+    }
+    
+    public void addMoney(double amount) {
+       
+       if (amount < 0){
+           this.balance = this.balance;
+       }else{
+       this.balance = this.balance + amount;
+       }
+       if (this.balance + amount > 150){
+           this.balance = 150;
+       }
     }
     
 }
